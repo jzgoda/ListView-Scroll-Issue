@@ -1,15 +1,15 @@
-import {Component, ChangeDetectionStrategy, OnInit, Input} from "@angular/core";
+import {Component, ChangeDetectionStrategy, Input, OnChanges, SimpleChanges} from "@angular/core";
 
 @Component({
 	selector: "sub-component",
 	templateUrl: "subComponent.component.html",
 	changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class SubComponentComponent implements OnInit {
+export class SubComponentComponent implements OnChanges {
 	@Input() myItem: number;
 	count: number = 0;
 
-	ngOnInit(): void {
-		this.count = this.myItem;
+	ngOnChanges(changes: SimpleChanges) {
+		this.count = changes['myItem'].currentValue;
 	}
 }
