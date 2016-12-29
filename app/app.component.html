@@ -1,8 +1,5 @@
 <ListView [items]="myItems | async" class="list-group">
     <template let-myItem="item">
-        <StackLayout class="list-group-item" height="100">
-            <Label [text]="'Parent Component: ' + myItem" fontSize="22"></Label>
-            <sub-component [myItem]="myItem"></sub-component>
-        </StackLayout>
+        <list-item-component [myItem]="myItem"></list-item-component>
     </template>
 </ListView>
