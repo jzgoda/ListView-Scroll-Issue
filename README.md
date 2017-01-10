@@ -1,6 +1,8 @@
 # ListView-Scroll-Issue
-Possible NativeScript bug
+NativeScript + Angular gotcha!
 
 When scrolling, the child components seem to jump around to different parent components. 
 
-![Alt Text](https://github.com/jzgoda/ListView-Scroll-Issue/blob/master/TheIllustratedVersion.gif)
+![Screen capture](https://github.com/jzgoda/ListView-Scroll-Issue/blob/master/TheIllustratedVersion.gif)
+
+This is a gotcha that is easily encountered. 
